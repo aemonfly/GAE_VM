@@ -15,8 +15,11 @@
    > pip install -t lib -r requirements.txt
  - 修改main.py中的相關個人資訊  (替換成 要開啟之 VM的名稱 VM所在區域  VM所屬專案)
    > INSTANCE_NAME = 'your_instance_name'
+   
    > INSTANCE_ZONE = 'your_instance_zone'
+   
    > PROJECT = 'your_instance_project'
+   
  - 部署到Google App Engine
    > gcloud app deploy app.yaml
 # 測試
