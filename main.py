@@ -1,8 +1,9 @@
 import json
-import httplib2
 import logging
 from google.appengine.api import memcache
 from oauth2client.client import GoogleCredentials
+from googleapiclient import discovery
+
 
 from flask import Flask
 
