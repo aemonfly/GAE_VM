@@ -17,7 +17,7 @@ COMPUTE = discovery.build(
 
 def get_all():
     instances = list_instances(COMPUTE,PROJECT,INSTANCE_ZONE)
-    return ''.join([x['name']] for x in instances)
+    return ''.join(str(e) for e in instances)
 def list_instances(compute, project, zone):
     result = compute.instances().list(project=project, zone=zone).execute()
     return result['items']
