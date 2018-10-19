@@ -32,11 +32,11 @@ def hello_world_info():
 
 @app.route('/start')
 def hello_start():
-    return compute.instances().start(INSTANCE_NAME, project=project, zone=zone).execute(), 200
+    return compute.instances().start(project=project, zone=zone, instance=INSTANCE_NAME).execute(), 200
 
 @app.route('/stop')
 def hello_stop():
-    return compute.instances().stop(INSTANCE_NAME, project=project, zone=zone).execute(), 200
+    return compute.instances().stop(project=project, zone=zone, instance=INSTANCE_NAME).execute(), 200
                     
 #@app.route('/vm/start')
 #def start_vm():
