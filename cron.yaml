@@ -1,4 +1,9 @@
 cron:
 - description: run instance
-  url: /a
-  schedule: every 5 minutes
+  url: /start
+  schedule: every day 18:00
+  timezone: Asia/Chongqing
+- description: stop instance
+  url: /stop
+  schedule: every day 23:59
+  timezone: Asia/Chongqing
